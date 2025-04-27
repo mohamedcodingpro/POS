@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="pos-container">
+        <header class="pos-header">
+            <h1>Point of Sale System</h1>
+            <div class="user-info">
+                <span id="current-user">User: Admin</span>
+                <span id="current-date"></span>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <!-- Products Section -->
+            <section class="products-section">
+                <div class="search-filter">
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" id="product-search" placeholder="Search products...">
+                    </div>
+                    <select id="category-filter">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+
+                <div class="product-grid" id="product-grid">
+                    <!-- Products will be dynamically inserted here -->
+                </div>
+            </section>
+
+            <!-- Cart Section -->
+            <section class="cart-section">
+                <div class="cart-header">
+                    <h2>Current Sale</h2>
+                    <button id="clear-cart" class="btn-danger">Clear</button>
+                </div>
+
+                <div class="cart-items" id="cart-items">
+                    <!-- Cart items will be dynamically inserted here -->
+                </div>
+
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">R0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Tax (15%):</span>
+                        <span id="tax">R0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total:</span>
+                        <span id="total">R0.00</span>
+                    </div>
+                </div>
+
+                <div class="payment-actions">
+                    <button id="checkout-btn" class="btn-primary">Process Payment</button>
+                    <button id="hold-sale" class="btn-secondary">Hold Sale</button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
