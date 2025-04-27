@@ -16,7 +16,7 @@ const currentUserElement = document.getElementById('current-user');
 // Check authentication status on page load
 document.addEventListener('DOMContentLoaded', () => {
     // If we're on the dashboard page, check authentication
-    if (window.location.pathname.includes('dashboard.html')) {
+    if (window.location.pathname.includes('Dashboard.html')) {
         checkAuthentication();
     } else {
         // On login page, initialize auth modal
@@ -139,7 +139,7 @@ function checkAuthentication() {
     
     if (!user) {
         // Redirect to login page if not authenticated
-        window.location.href = 'index.';
+        window.location.href = 'index.html';
         return;
     }
     
@@ -183,7 +183,7 @@ function clearUserSession() {
 
 // Navigation functions
 function redirectToDashboard() {
-    window.location.href = 'dashboard.html';
+    window.location.href = 'Dashboard.html';
 }
 
 function showAuthModal() {
